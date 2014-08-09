@@ -2,7 +2,7 @@
 # plot1.R
 # 1. Global active power plot histogram
 
-feb1data <- read.table(pipe('grep "^2/1/2007" household_power_consumption.txt'), sep=';', na.strings='?')
+feb1data <- read.table(pipe('grep "^1/2/2007" household_power_consumption.txt'), sep=';', na.strings='?')
 feb2data <- read.table(pipe('grep "^2/2/2007" household_power_consumption.txt'), sep=';', na.strings='?')
 hdr <- read.table("household_power_consumption.txt", sep=';', nrow=1, header=TRUE)
 data <- rbind(na.omit(feb1data),na.omit(feb2data))
